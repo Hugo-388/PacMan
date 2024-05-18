@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1FA558D-6B22-4387-AA75-7A1B282FB979}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PacMan</RootNamespace>
+    <AssemblyName>PacMan</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Fantome.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grille.cs" />
+    <Compile Include="Pacman.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Son.cs" />
+    <Compile Include="Sprite.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fantome1B.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fantome1D.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fantome1G.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fantome1H.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fantome2B.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fantome2D.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fantome2G.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fantome2H.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fantome3B.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fantome3D.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fantome3G.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fantome3H.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fantome4B.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fantome4D.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fantome4G.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fantome4H.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FinComestible.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Force.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fraise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grille.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InterMission.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Intro.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jouer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JouerOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JoueurAnimeB.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JoueurAnimeD.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JoueurAnimeG.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JoueurAnimeH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JoueurB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JoueurD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JoueurG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JoueurH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JoueurMort.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MangeFantome.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MangeFruit.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MangePoint.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mort.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Poire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pomme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuitterOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sirene.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VieSupplementaire.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YeuxB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YeuxD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YeuxG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YeuxH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ananas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cerise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Citron.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comestible.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
